@@ -8,17 +8,19 @@ var student_controller = require('../controllers/studentController');
 
 
 
-/// STUDENT ROUTES ///
-
+/// STUDENT API ROUTES ///
 
 // GET request for one student.
+// GET api/student/1  - Get Student with id = 1
 router.get('/student/:id', student_controller.student_detail);
 
 // GET request for list of all student items.
+// GET api/students  - Get all students
 router.get('/students', student_controller.student_list);
 
 
-// GET request for list of all student items.
+// Delete request for one student.
+// DELETE /api/student/1 - Delete Student with id = 1
 router.delete('/student/:id', student_controller.student_delete);
 
 

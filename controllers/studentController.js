@@ -14,22 +14,19 @@ exports.index = function(req, res) {
 exports.student_list = function(req, res) {
 	students = studentModel.getAllStudents();
 	res.send(students);	
-    //res.send('NOT IMPLEMENTED: student list');
 };
 
 // Display detail page for a specific student.
 exports.student_detail = function(req, res) {
 	student = studentModel.getStudentById(req.params.id);
 	res.send(student);
-//    res.send('NOT IMPLEMENTED: student detail: ' + req.params.id);
 };
 
-// Display detail page for a specific student.
+// Delete a specific student.
 exports.student_delete = function(req, res) {
 	studentModel.deleteStudentById(req.params.id);
 	result = {result:'success'}
     res.send(result);
-//    res.send('NOT IMPLEMENTED: student detail: ' + req.params.id);
 };
 
 
