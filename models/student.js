@@ -14,6 +14,8 @@ class StudentModel {
 				{ id: 3, name: 'Kenneth Findley', class: 'Senior', major: 'Computer Science' },
 				{ id: 4, name: 'Jason Kastounis', class: 'Senior', major: 'Computer Science' },	
 			];
+
+		this.nextId = this.studentList.length + 1;
 	}
 
 	//return all students

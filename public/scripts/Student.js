@@ -81,6 +81,7 @@ class StudentModel {
 				element.dispatchEvent(event);
 			 
 			}
+
 		};
 
 		let url = `http://localhost:3050/api/student/${id}`;
@@ -161,6 +162,14 @@ class StudentView {
 		modalBody.replaceChildren();
 		modalBody.append( classRow, majorRow, deleteRow);
 
+		let btnFooterClose = viewHelper.createElement('button', ['btn','btn-primary']);
+		btnFooterClose.setAttribute('type', 'button');
+		btnFooterClose.setAttribute('data-dismiss', 'modal');
+		btnFooterClose.textContent = 'Close';
+		let modalFooter = viewHelper.getElement('#studentModalFooter');
+		modalFooter.replaceChildren();
+		modalFooter.append(btnFooterClose);
+
 		const modal = document.querySelector('#studentModal');
 		$('#studentModal').modal('toggle');
 
@@ -184,7 +193,6 @@ class StudentView {
 		labelColumn.textContent = '';
 		let fieldColumn = viewHelper.createElement('div', ['col-sm-10']);
 
-//		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 		let button = viewHelper.createElement('button', ['btn','btn-secondary']);
 		button.textContent = 'Delete';
 		button.setAttribute('onClick', 'app.handleDeleteCard('+id+');');
