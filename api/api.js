@@ -6,8 +6,6 @@ var router = express.Router();
 var student_controller = require('../controllers/studentController');
 
 
-
-
 /// STUDENT API ROUTES ///
 
 // GET request for one student.
@@ -20,7 +18,7 @@ router.get('/students', student_controller.student_list);
 
 
 // Delete request for one student.
-// DELETE /api/student/1 - Delete Student with id = 1
+// DELETE api/student/1  - Delete Student with id = 1
 router.delete('/student/:id', student_controller.student_delete);
 
 

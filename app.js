@@ -8,6 +8,8 @@ var apiRouter = require('./api/api');
 
 var app = express();
 
+//used for parsing application/json from request body
+app.use(express.json());
 
 //Setup router for the index.html page
 app.use('/', indexRouter);

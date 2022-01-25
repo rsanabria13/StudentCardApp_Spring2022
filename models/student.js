@@ -15,8 +15,14 @@ class StudentModel {
 				{ id: 4, name: 'Jason Kastounis', class: 'Senior', major: 'Computer Science' },	
 			];
 
-		this.nextId = this.studentList.length + 1;
+		this.nextId = this.studentList.length;
 	}
+
+	reserveAndGetNextId() {
+		this.nextId++;
+		return this.nextId;
+	}
+
 
 	//return all students
 	getAllStudents() {

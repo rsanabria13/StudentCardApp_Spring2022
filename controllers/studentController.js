@@ -5,11 +5,6 @@ studentModel = new StudentModel();
 const path = require("path");
 
 
-exports.index = function(req, res) {
-    res.sendFile(path.resolve('public/student.html') );
-};
-
-
 // Display list of all students.
 exports.student_list = function(req, res) {
 	students = studentModel.getAllStudents();
@@ -31,6 +26,7 @@ exports.student_delete = function(req, res) {
 
 
 
+//NOT IMPLEMENTED
 
 // Display student create form on GET.
 exports.student_create_get = function(req, res) {
@@ -39,6 +35,8 @@ exports.student_create_get = function(req, res) {
 
 // Handle student create on POST.
 exports.student_create_post = function(req, res) {
+    //if the data is JSON, access the data using req.body.<field> ie. req.body.name
+    console.log(req.body);
     res.send('NOT IMPLEMENTED: student create POST');
 };
 
