@@ -3,9 +3,10 @@
 Installation instructions:
 
 1. Install node.js from https://nodejs.org/en/download/
-2. retreive this repository to a local directory
-3. run the following command to install each of the dependencies for the application
+2. Retreive this repository to a local directory
+3. In the command prompt, open the local directory of the repository
+4. Run the following command to install each of the dependencies for the application
     > npm install
-4. run the following command to run the application
+5. Run the following command to run the application
     > node app.js
-5. open http://localhost:3050/ in your browser (checked using Chrome).
+6. Open http://localhost:3050/ in your browser (checked using Chrome).
