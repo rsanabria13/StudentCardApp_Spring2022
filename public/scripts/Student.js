@@ -114,7 +114,7 @@ class StudentModel {
 
 class StudentView {
 	constructor() {
-		this.createView();
+		//this.createView();
 	}
 	
 
@@ -123,7 +123,7 @@ class StudentView {
 
 	createView(studentData) {
 		
-		console.log(studentData);
+		//console.log(studentData);
 		this.studentData = studentData;
 		
 		this.app = viewHelper.getElement('#root');
