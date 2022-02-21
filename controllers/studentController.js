@@ -57,5 +57,7 @@ exports.student_update_get = function(req, res) {
 
 // Handle student update on POST.
 exports.student_update_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: student update POST');
+    student = this.studentModel.updateStudent(req.params.id, req.params.body);
+    result = {result : 'success'}
+    res.send(result);
 };

@@ -41,6 +41,10 @@ class StudentModel {
 	deleteStudentById(studentId) {
 		this.studentList = this.studentList.filter(function(student){return student.id != studentId});
 	}
+
+	updateStudent(id, body){
+		return this.studentList;
+	}
 	
 
 

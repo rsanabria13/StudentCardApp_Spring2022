@@ -91,6 +91,25 @@ class StudentModel {
 		xhttp.send();
 	}
 
+	updateStudentData(id){
+		console.log('In UpdateStudent()');
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function(){
+			if(this.readyState == 4 && this.status == 200 && this.deleteStudent){
+				console.log(this.responseText);
+
+				const element = document.querySelector('#root');
+				let event = new CustomEvent('DataUpdated', {detail:'success'});
+				element.dispatchEvent(event);
+			}
+		};
+
+		let url = `http://localhost:3050/api/student/${id}`;
+		xhttp.open("POST", url, true);
+		xhttp.setRequestHeader("Content-type", "application/json");
+		xhttp.send(JSON.stringify({name : nameValue, class : classValue, major : majorValue}));
+	}
+
 }
 
 class StudentView {
@@ -235,6 +254,7 @@ class StudentController {
 	handleDeleteCard(id) {
 		console.log('modal ' + id + ' delete');
 		this.model.deleteStudent(id);
+		this.model.updateStudentData(id);
 	}
 
 	handleStudentDeleted() {

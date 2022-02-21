@@ -38,10 +38,11 @@ router.post('/student/:id/delete', student_controller.student_delete_post);
 router.get('/student/:id/update', student_controller.student_update_get);
 
 // POST request to update student.
+*/
 router.post('/student/:id/update', student_controller.student_update_post);
 
 
-*/
+
 
 
 
