@@ -114,7 +114,7 @@ class StudentModel {
 
 class StudentView {
 	constructor() {
-		//this.createView();
+		this.createView();
 	}
 	
 
@@ -123,7 +123,7 @@ class StudentView {
 
 	createView(studentData) {
 		
-//		consol.log(studentData);
+		consol.log(studentData);
 		this.studentData = studentData;
 		
 		this.app = viewHelper.getElement('#root');
@@ -158,6 +158,8 @@ class StudentView {
 			cardTitle.textContent = student.name;
 			let cardText = viewHelper.createElement('p', ['card-text']);
 			cardText.textContent = student.class;
+			let cardT = viewHelper.createElement('p', ['card-text']);
+			cardT.textContent = student.major;
 		
 			cardBody.append(cardTitle, cardText);
 			card.append(cardBody);
