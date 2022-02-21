@@ -123,7 +123,7 @@ class StudentView {
 
 	createView(studentData) {
 		
-		consol.log(studentData);
+		console.log(studentData);
 		this.studentData = studentData;
 		
 		this.app = viewHelper.getElement('#root');
